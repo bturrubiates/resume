@@ -147,19 +147,12 @@
             Parallel Programming Group Project
         }{}{
             \vspace{3pt}
-            \textit{Paratype} is a proof of concept for performing parallel
-            type analysis implemented in the Go programming language.
-            \textit{Paratype} operated on a toy language inspired by functional
-            languages like Haskell. We designed a grammar for the toy
-            language which supported syntax for parametric polymorphism using
-            type classes and type variables. \textit{Paratype} took programs
-            written in the toy language as input and performed transformations
-            on the abstract syntax tree. The output was a well-formed program
-            that reduced each polymorphic call to a monomorphic call by
-            instantiating type-specific implementations. The algorithm we
-            designed utilizes goroutines, concurrent function primitives in Go,
-            to simulate an actor model in which the function types are resolved
-            in parallel.
+            Developed a proof of concept parallel actor model of type analysis
+            implemented in Google Go. \textit{Paratype} operates on a toy
+            functional language that supports parametric polymorphism inspired
+            by Haskell. We developed an algorithm which utilizes goroutines --
+            concurrent function primitives in Go -- to reduce polymorphic code
+            to monomorphic code by producing type-specific implementations.
         }
     }
 \end{itemize}
