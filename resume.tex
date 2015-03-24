@@ -4,6 +4,7 @@
 \moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.70]{geometry}
+\usepackage{microtype}
 
 \usepackage{import}
 
@@ -130,11 +131,40 @@
 
 \end{itemize}
 
-\section{Education}
+\section{Projects}
 
 \vspace{2pt}
 
-\subsection{Academic Qualifications}
+\begin{itemize}
+    \item {
+        \cventry {
+            Spring 2014
+        }{
+            An actor model of type analysis
+        }{
+            \textit{Paratype}
+        }{
+            Parallel Programming Group Project
+        }{}{
+            \vspace{3pt}
+            \textit{Paratype} is a proof of concept for performing parallel
+            type analysis implemented in the Go programming language.
+            \textit{Paratype} operated on a toy language inspired by functional
+            languages like Haskell. We designed a grammar for the toy
+            language which supported syntax for parametric polymorphism using
+            type classes and type variables. \textit{Paratype} took programs
+            written in the toy language as input and performed transformations
+            on the abstract syntax tree. The output was a well-formed program
+            that reduced each polymorphic call to a monomorphic call by
+            instantiating type-specific implementations. The algorithm we
+            designed utilizes goroutines, concurrent function primitives in Go,
+            to simulate an actor model in which the function types are resolved
+            in parallel.
+        }
+    }
+\end{itemize}
+
+\section{Education}
 
 \vspace{2pt}
 
@@ -157,7 +187,7 @@
 
 \end{itemize}
 
-\subsection{Relevant Coursework}
+\section{Relevant Coursework}
 
 \vspace{2pt}
 
@@ -170,7 +200,6 @@
             Languages and Automata, Computer Architecture, Systems Programming
         }
     }
-
 \end{itemize}
 
 \section{Skills}
@@ -180,10 +209,9 @@
 \begin{itemize}
 
     \item{
-        \textbf{Programming Languages, Proficient:}
+        \textbf{Programming Languages}
         \textit{
-            C, C++, Python, Java, Go, Clojure, x86 assembly, Shell (Bash, Zsh),
-            SQL
+            C, Python, Clojure, Go, Java,  x86 assembly, C++, Shell (Bash, Zsh)
         }
     }
     \vspace{3pt}
@@ -196,7 +224,7 @@
     \item{
         \textbf{Software:}
         \textit{
-            Vim, \LaTeX, GNU Make, CMake, Git
+            Git, Vim, \LaTeX, CMake, GNU Make, Autotools
         }
     }
     \item {
