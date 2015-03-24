@@ -3,7 +3,7 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.70]{geometry}
+\usepackage[scale=0.77]{geometry}
 \usepackage{microtype}
 
 \usepackage{import}
@@ -12,6 +12,15 @@
 \phone[mobile]{956 802 9037}
 \email{ben@turrubiat.es}
 \social[github][github.com/bturrubiates]{bturrubiates}
+
+\renewcommand*{\cventry}[7][.25em]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	  {\bfseries #4} & {\bfseries #5} \\%
+	  {\itshape #3\ifthenelse{\equal{#6}{}}{}{#6}} & {\itshape #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+    \else{\\\vbox{\small#7}}\fi%
+  \par\addvspace{#1}}
 
 \begin{document}
 \makecvtitle
@@ -229,7 +238,7 @@
         }{
             Socorro, NM
         }{
-            \textit{3.61}
+            \textit{GPA: 3.61}
         }{
         }
     }
@@ -253,7 +262,7 @@
 
 \section{Skills}
 
-\vspace{3pt}
+\vspace{2pt}
 
 \begin{itemize}
 
@@ -270,12 +279,14 @@
             OpenMP, MPI
         }
     }
+    \vspace{3pt}
     \item{
         \textbf{Software:}
         \textit{
             Git, Vim, \LaTeX, CMake, GNU Make, Autotools
         }
     }
+    \vspace{3pt}
     \item {
         \textbf{Data Formats:}
         \textit{
