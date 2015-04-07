@@ -1,0 +1,143 @@
+\documentclass[10pt,letterpaper,sans]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.77]{geometry}
+\usepackage{microtype}
+
+\usepackage{import}
+
+\name{$first$}{$last$}
+\address{$address$}{}{}
+\phone[mobile]{$phone$}
+\email{$email$}
+\social[github][github.com/$github$]{$github$}
+
+\renewcommand*{\cventry}[7][.25em]{
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+	  {\bfseries #4} & {\bfseries #5} \\%
+	  {\itshape #3\ifthenelse{\equal{#6}{}}{}{#6}} & {\itshape #2}\\%
+  \end{tabular*}%
+  \ifx&#7&%
+    \else{\\\vbox{\small#7}}\fi%
+  \par\addvspace{#1}}
+
+\begin{document}
+\makecvtitle
+\vspace{-2em}
+
+\section{Employment}
+
+\begin{itemize}
+$for(jobs)$
+    \vspace{3pt}
+    \item{
+        \cventry{
+            $jobs.start$--$jobs.end$
+        }{
+            $jobs.title$$if(jobs.group)$, $jobs.group$ $endif$
+        }{
+            $jobs.employer$
+        }{
+            $jobs.location$
+        }{}{
+            \vspace{3pt}
+            \begin{itemize}
+$for(jobs.description)$
+                \item {
+                    $jobs.description$
+                }
+$endfor$
+            \end{itemize}
+        }
+    }
+$endfor$
+\end{itemize}
+
+\section{Education}
+
+\begin{itemize}
+$for(education)$
+    \vspace{2pt}
+    \item{
+        \cventry{
+            $education.start$--$education.end$
+        }{
+            $education.degree$ $education.major$%
+            $if(education.minor)$; minor in $education.minor$ $endif$
+        }{
+            $education.institution$
+        }{
+            $education.location$
+        }{
+            \textit{GPA: $education.gpa$}
+        }{
+        }
+    }
+$endfor$
+\end{itemize}
+
+\section{Projects}
+
+\begin{itemize}
+$for(projects)$
+    \vspace{3pt}
+
+    \item {
+        \cventry {
+            $projects.date$
+        }{
+            $projects.summary$
+        }{
+            \textit{$projects.title$}
+        }{
+            $projects.event$
+        }{}{
+            \vspace{3pt}
+$for(projects.description)$
+            $projects.description$
+$endfor$
+        }
+    }
+$endfor$
+\end{itemize}
+
+\section{Relevant Coursework}
+
+\begin{itemize}
+$for(coursework)$
+    \vspace{2pt}
+    \item{
+        \textbf{$coursework.status$:}
+        \textit{
+            $for(coursework.classes)$$coursework.classes$$sep$, $endfor$
+        }
+    }
+$endfor$
+\end{itemize}
+
+\section{Skills}
+
+\begin{itemize}
+$for(skills)$
+    \vspace{3pt}
+    \item{
+        \textbf{$skills.category$:}
+        \textit{
+            $for(skills.items)$$skills.items$$sep$, $endfor$
+        }
+    }
+$endfor$
+\end{itemize}
+
+\section{Professional Memberships}
+\begin{itemize}
+$for(memberships)$
+    \item {
+            $memberships.status$; $memberships.organization$
+    }
+$endfor$
+\end{itemize}
+
+\end{document}
