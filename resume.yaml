@@ -1,0 +1,133 @@
+---
+first: Benjamin
+last: Turrubiates
+phone: 956 802 9037
+email: ben@turrubiat.es
+github: bturrubiates
+
+jobs:
+- employer: Los Alamos National Laboratory
+  group: HPC-5
+  title: Post Baccalaureate Research Assistant
+  start: January 2015
+  end: Present
+  location: Los Alamos, NM
+  description:
+  - Ported libfabric, a set of APIs for direct network hardware access, to OS X.
+  - Contributed a logging subsystem to libfabric, allowing for fine-grained
+    control over log levels, subsystems, and providers.
+  - Currently contributing to the development of a libfabric provider for the
+    Cray Aries Generic Network Interface (GNI).
+- employer: Los Alamos National Laboratory
+  group: HPC-3
+  title: Undergraduate Research Assitant
+  start: July 2014
+  end: December 2014
+  location: Los Alamos, NM
+  description:
+  - Used C++ and the Component Based Tool Framework, a scalable tree-based
+    transport system, to develop parallel tools to aggregate configuration
+    information about a computing cluster.
+  - Contributed to the development of Pavilion, a customizable software
+    framework for launching and analyzing tests targeting HPC platforms.
+- employer: Los Alamos National Laboratory
+  group: HPC-3
+  title: Undergraduate Research Assistant
+  start: May 2013
+  end: August 2013
+  location: Los Alamos, NM
+  description:
+  - Developed a simple test harness which allows for easily varing execution
+    environments and test parameters in an HPC environment using Python and
+    Moab.
+- employer: New Mexico EPSCoR
+  title: Outreach Educator
+  start: 2011
+  end: 2012
+  location: Socorro, NM
+  description:
+  - Advised middle and high school students on projects for the New Mexico
+    Supercomputing Challenge by providing feedback on project proposals.
+  - Worked with a team to develop curriculum for high school AP Computer
+    Science classes focusing on the Java programming language.
+
+education:
+- institution: New Mexico Institute of Mining and Technology
+  location: Socorro, NM
+  start: August 2010
+  end: December 2014
+  degree: B.Sc.
+  major: Computer Science
+  minor: Electrical Engineering
+  gpa: 3.61
+
+projects:
+- title: MORT
+  summary: C89 optimizing compiler
+  event: Compiler Writing Semester Project
+  date: Fall 2014
+  description:
+  - Developed an optimizing C89 compiler written in C++11 which uses a
+    graph-based intermediate representation in SSA form -- a property that
+    requires each variable is only assigned once -- to target x86-64 while
+    performing common optimizations such as useless code elimination, and loop
+    optimizations. Worked in a four person group using pair programming,
+    continuous integration, and a branch-heavy git workflow.
+
+- title: Paratype
+  summary: An actor model of type analysis
+  event: Parallel Programming Group Project
+  date: Spring 2014
+  description:
+  - Developed a proof of concept parallel actor model of type analysis
+    implemented in Google Go. Paratype operates on a toy functional language
+    that supports parametric polymorphism inspired by Haskell. We developed an
+    algorithm which utilizes goroutines – concurrent function primitives in Go
+    – to reduce polymorphic code to monomorphic code by producing type-specific
+    implementations.
+
+coursework:
+- status: Completed
+  classes:
+    - Compiler Writing
+    - Design and Analysis of Algorithms
+    - Operating Systems
+    - Parallel Programming
+    - Software Engineering
+    - Formal Languages and Automata
+    - Computer Architecture
+    - Systems Programming
+
+skills:
+- category: Programming Languages
+  items:
+  - C
+  - Python
+  - Clojure
+  - Go
+  - Java
+  - x86 assembly
+  - C++
+  - Shell (Bash, Zsh)
+- category: HPC Languages and Extensions
+  items:
+  - OpenMP
+  - MPI
+- category: Software
+  items:
+  - Git
+  - Vim
+  - \LaTeX
+  - CMake
+  - GNU Make
+  - Autotools
+- category: Data Formats
+  items:
+  - JSON
+  - YAML
+  - XML
+
+memberships:
+- status: Member
+  organization: Association for Computing Machinery
+...
